@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name"><i>Meeting Time Control</i></string>
+    <string name="drawer_open">open drawer</string>
+    <string name="drawer_close">close drawer</string>
+    <string name="screen1">F. M. M + N. V. C (2x)</string>
+    <string name="screen2">F. M. M + N. V. C (1x)</string>
+    <string name="screen3">Apresentações + N. V. C (2x)</string>
+    <string name="screen4">Apresentações + N. V. C (2x)</string>
+    <string name="screen5">Visita SC</string>
+    <string name="apresentações">Apresentações</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment1">Tela1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

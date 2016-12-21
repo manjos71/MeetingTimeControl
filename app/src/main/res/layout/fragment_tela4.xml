@@ -1,0 +1,548 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frmTela2"
+    tools:context="layout.Tela2Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/section1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TESOUROS DA PALAVRA DE DEUS"
+            android:textAlignment="center"
+            android:background="#5A6A70"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblS1_A1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Comentários iniciais" />
+
+            <TextView
+                android:id="@+id/lblS1_B1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Inicio" />
+
+            <EditText
+                android:id="@+id/txtS1_C1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="19:50:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/lblS1_D1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Fim"/>
+
+            <EditText
+                android:id="@+id/txtS1_E1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="19:53:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:hint="00:03:00"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblS1_A2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Discurso" />
+
+            <TextView
+                android:id="@+id/lblS1_B2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Inicio" />
+
+            <EditText
+                android:id="@+id/txtS1_C2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="19:53:30"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/lblS1_D2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Fim"/>
+
+            <EditText
+                android:id="@+id/txtS1_E2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:03:30"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:hint="00:03:00"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblS1_A3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Encontre jóias espirituais" />
+
+            <TextView
+                android:id="@+id/lblS1_B3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Inicio" />
+
+            <EditText
+                android:id="@+id/txtS1_C3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:04:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/lblS1_D3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Fim"/>
+
+            <EditText
+                android:id="@+id/txtS1_E3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:12:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:hint="00:03:00"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblS1_A4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Leitura da biblia" />
+
+            <TextView
+                android:id="@+id/lblS1_B4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Inicio" />
+
+            <EditText
+                android:id="@+id/txtS1_C4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:12:30"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/lblS1_D4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Fim"/>
+
+            <EditText
+                android:id="@+id/txtS1_E4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:16:30"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:hint="00:03:00"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/section2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblS1_A4"
+            android:textAlignment="center"
+            android:background="#C18626"
+            android:textColor="#FFFFFF"
+            android:text="FAÇA SEU MELHOR NO MINISTÉRIO"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblS2_A1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Apresentações" />
+
+            <TextView
+                android:id="@+id/lblS2_B1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Inicio" />
+
+            <EditText
+                android:id="@+id/txtS2_C1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:17:30"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/lblS2_D1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Fim"/>
+
+            <EditText
+                android:id="@+id/txtS2_E1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:19:30"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:hint="00:03:00"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/section3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblS2_A3"
+            android:textAlignment="center"
+            android:background="#961526"
+            android:textColor="#FFFFFF"
+            android:text="NOSSA VIDA CRISTÃ"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblS3_A1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Designação 1" />
+
+            <TextView
+                android:id="@+id/lblS3_B1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Inicio" />
+
+            <EditText
+                android:id="@+id/txtS3_C1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:36:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/lblS3_D1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Fim"/>
+
+            <EditText
+                android:id="@+id/txtS3_E1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:51:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:hint="00:03:00"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblS3_A3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Estudo de Livro" />
+
+            <TextView
+                android:id="@+id/lblS3_B3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Inicio" />
+
+            <EditText
+                android:id="@+id/txtS3_C3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:51:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/lblS3_D3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Fim"/>
+
+            <EditText
+                android:id="@+id/txtS3_E3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="21:21:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:hint="00:03:00"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblS3_A4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Comentários finais" />
+
+            <TextView
+                android:id="@+id/lblS3_B4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Inicio" />
+
+            <EditText
+                android:id="@+id/txtS3_C4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="20:21:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/lblS3_D4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="Fim"/>
+
+            <EditText
+                android:id="@+id/txtS3_E4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="time"
+                android:hint="21:24:00"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:hint="00:03:00"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/hamburger"
+        android:id="@+id/fab"
+        android:layout_weight="1" />
+
+    <include layout="@layout/fab_layout" />
+
+</FrameLayout>
