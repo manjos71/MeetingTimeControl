@@ -278,20 +278,20 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
         });
 
 
-        fab= (FloatingActionButton) view.findViewById(R.id.fab);
+        fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab1 = (FloatingActionButton) view.findViewById(R.id.fab_1);
         fab2 = (FloatingActionButton) view.findViewById(R.id.fab_2);
         fab3 = (FloatingActionButton) view.findViewById(R.id.fab_3);
 
         //Animations
         show_fab_1 = AnimationUtils.loadAnimation(getContext(), R.anim.fab1_show);
-        //show_fab_1 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab1_show);
         hide_fab_1 = AnimationUtils.loadAnimation(getContext(), R.anim.fab1_hide);
         show_fab_2 = AnimationUtils.loadAnimation(getContext(), R.anim.fab2_show);
         hide_fab_2 = AnimationUtils.loadAnimation(getContext(), R.anim.fab2_hide);
         show_fab_3 = AnimationUtils.loadAnimation(getContext(), R.anim.fab3_show);
         hide_fab_3 = AnimationUtils.loadAnimation(getContext(), R.anim.fab3_hide);
 
+        /*
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -307,7 +307,7 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
                 }
             }
         });
-
+        */
 
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -318,16 +318,48 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
                 int t1hours = Integer.parseInt(tokens1[0]);
                 int t1minutes = Integer.parseInt(tokens1[1]);
                 int t1seconds = Integer.parseInt(tokens1[2]);
-                int sec1 = 3600 * t1hours + 60 * t1minutes + t1seconds;
+                int h1= t1hours;
+                int m1= t1minutes;
+                int s1= t1seconds;
                 String t2 = txtS1_E1.getText().toString();
                 String[] tokens2 = t2.split(":");
                 int t2hours = Integer.parseInt(tokens2[0]);
                 int t2minutes = Integer.parseInt(tokens2[1]);
                 int t2seconds = Integer.parseInt(tokens2[2]);
-                int sec2 = 3600 * t2hours + 60 * t2minutes + t2seconds;
-                int interval1 = sec2-sec1;
+                int h2= t2hours;
+                int m2= t2minutes;
+                int s2= t2seconds;
 
-                lblS1_F1.setText("" + interval1);
+                if (s2<s1 && m2<m1){
+                    int s2b=s2+60;
+                    int s= s2b-s1;
+                    int m2b=m2+60;
+                    int m= m2b-m1;
+                    if (s<10 && m<10) {
+                        lblS1_F1.setText("0" + m + ":0" + s);
+                    } else if (s<10 && m>9){
+                        lblS1_F1.setText("" + m + ":0" + s);
+                    }
+                }else if (s2<s1 && m2>m1){
+                    int s2b=s2+60;
+                    int s= (s2b-s1);
+                    int m2b=m2-1;
+                    int m= m2b-m1;
+                    if (s<10 && m<10) {
+                        lblS1_F1.setText("0" + m + ":0" + s);
+                    } else if (s<10 && m>9){
+                        lblS1_F1.setText("" + m + ":0" + s);
+                    }
+                }else {
+                    int s= s2-s1;
+                    int m= m2-m1;
+                    if (s<10 && m<10) {
+                        lblS1_F1.setText("0" + m + ":0" + s);
+                    } else if (s<10 && m>9){
+                        lblS1_F1.setText("" + m + ":0" + s);
+                    }
+                }
+
 
                 //***works***
                 //String t2 = "00:03:23";
@@ -335,44 +367,103 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
                 //lblS1_F2.setText(txtS1_E2.getText());
             }
         });
-        //fab1.setOnClickListener(this);
+
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lblS1_F1.setText("");
             }
         });
+        fab.setOnClickListener(this);
         fab3.setOnClickListener(this);
-
         return view;
     }
 
-
-
     @Override
     public void onClick(View v) {
-        /*float t1=0;
-        float t2=0;
-        double r1=0;
-
-        t1 = Float.parseFloat(txtS1_C1.getText().toString());
-        t2 = Float.parseFloat(txtS1_E1.getText().toString());
-        r1= (t2-t1);
-        */
 
         switch (v.getId()) {
 
-            case R.id.fab_1:
-                lblS1_F1.setText(txtS1_E1.getText());
-
+            case R.id.fab:
+                if (FAB_Status == false) {
+                    //Display FAB menu
+                    expandFAB();
+                    FAB_Status = true;
+                } else {
+                    //Close FAB menu
+                    hideFAB();
+                    FAB_Status = false;
+                }
                 break;
+            /*
+            case R.id.fab_1:
+                String t1 = txtS1_C1.getText().toString();
+                String[] tokens1 = t1.split(":");
+                int t1hours = Integer.parseInt(tokens1[0]);
+                int t1minutes = Integer.parseInt(tokens1[1]);
+                int t1seconds = Integer.parseInt(tokens1[2]);
+                int h1= t1hours;
+                int m1= t1minutes;
+                int s1= t1seconds;
+                String t2 = txtS1_E1.getText().toString();
+                String[] tokens2 = t2.split(":");
+                int t2hours = Integer.parseInt(tokens2[0]);
+                int t2minutes = Integer.parseInt(tokens2[1]);
+                int t2seconds = Integer.parseInt(tokens2[2]);
+                int h2= t2hours;
+                int m2= t2minutes;
+                int s2= t2seconds;
 
+                if (s2<s1 && m2<m1){
+                    int s2b=s2+60;
+                    int s= s2b-s1;
+                    int m2b=m2+60;
+                    int m= m2b-m1;
+                    if (s<10 && m<10) {
+                        lblS1_F1.setText("0" + m + ":0" + s);
+                    } else if (s<10 && m>9){
+                        lblS1_F1.setText("" + m + ":0" + s);
+                    }
+                }else if (s2<s1 && m2>m1){
+                    int s2b=s2+60;
+                    int s= (s2b-s1);
+                    int m2b=m2-1;
+                    int m= m2b-m1;
+                    if (s<10 && m<10) {
+                        lblS1_F1.setText("0" + m + ":0" + s);
+                    } else if (s<10 && m>9){
+                        lblS1_F1.setText("" + m + ":0" + s);
+                    }
+                }else {
+                    int s= s2-s1;
+                    int m= m2-m1;
+                    if (s<10 && m<10) {
+                        lblS1_F1.setText("0" + m + ":0" + s);
+                    } else if (s<10 && m>9){
+                        lblS1_F1.setText("" + m + ":0" + s);
+                    }
+                }
+                break;
+                */
         }
     }
 
     public static long getTimeDiff (Date time1, Date time2, TimeUnit timeUnit){
         long diffInMinutes = time2.getTime()-time1.getTime();
         return timeUnit.convert(diffInMinutes, TimeUnit.MINUTES);
+    }
+
+    public static final int sec (int s1, int s2, int m1, int m2, int h1) {
+        if (s2>s1){
+            s1 =s1+60;
+            m1= m1-1;
+            return s1;
+        }
+        if (m2>m1){
+            m1 =m1+60;
+            h1= h1-1;
+        }
+            return m1;
     }
 
     private void expandFAB() {
