@@ -14,8 +14,6 @@ import android.widget.TextView;
 
 import com.example.marcosantonio.myapplication.R;
 
-import org.joda.time.Interval;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.lang.String;
@@ -84,7 +82,7 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
         txtS1_C1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");//hh = horas AM/PM
                 String currentTime = sdf.format(new Date());
                 txtS1_C1.setText(currentTime);
             }
@@ -315,23 +313,21 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
             @Override
             public void onClick(View v) {
 
-                //Date t1 = new SimpleDateFormat("HH:mm:ss").;
+                String t1 = txtS1_C1.getText().toString();
+                String[] tokens1 = t1.split(":");
+                int t1hours = Integer.parseInt(tokens1[0]);
+                int t1minutes = Integer.parseInt(tokens1[1]);
+                int t1seconds = Integer.parseInt(tokens1[2]);
+                int sec1 = 3600 * t1hours + 60 * t1minutes + t1seconds;
+                String t2 = txtS1_E1.getText().toString();
+                String[] tokens2 = t2.split(":");
+                int t2hours = Integer.parseInt(tokens2[0]);
+                int t2minutes = Integer.parseInt(tokens2[1]);
+                int t2seconds = Integer.parseInt(tokens2[2]);
+                int sec2 = 3600 * t2hours + 60 * t2minutes + t2seconds;
+                int interval1 = sec2-sec1;
 
-                int t1= (int) Date.parse(String.valueOf(txtS1_C1));
-                int t2= (int) Date.parse(String.valueOf(txtS1_E1));
-                int t3= t2-t1;
-                String r1 = String.valueOf(t3);
-
-                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-                String interval = sdf.format(r1);
-                lblS1_F1.setText(interval);
-
-                //String r1 = "00:03:19";
-                //String a = null;
-                //a = String.format(txtS1_C1.getText().toString());
-                //lblS1_F1.setText(a);
-                //lblS1_F1.setText(r1);
-                //lblS1_F2.setText(txtS1_E2.getText());
+                lblS1_F1.setText("" + interval1);
 
                 //***works***
                 //String t2 = "00:03:23";
@@ -340,11 +336,18 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
             }
         });
         //fab1.setOnClickListener(this);
-        fab2.setOnClickListener(this);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lblS1_F1.setText("");
+            }
+        });
         fab3.setOnClickListener(this);
 
         return view;
     }
+
+
 
     @Override
     public void onClick(View v) {
