@@ -337,6 +337,7 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
                     int m= m2b-m1;
                     if (s<10 && m<10) {
                         lblS1_F1.setText("0" + m + ":0" + s);
+                        //lblS1_F1.setFont(new Font);
                     } else if (s<10 && m>9){
                         lblS1_F1.setText("" + m + ":0" + s);
                     }
