@@ -19,6 +19,15 @@ import java.util.Date;
 import java.lang.String;
 import java.util.concurrent.TimeUnit;
 
+//import java.util.Date;
+
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import org.joda.time.Hours;
+import org.joda.time.Minutes;
+import org.joda.time.Seconds;
+
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -277,7 +286,6 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
             }
         });
 
-
         fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab1 = (FloatingActionButton) view.findViewById(R.id.fab_1);
         fab2 = (FloatingActionButton) view.findViewById(R.id.fab_2);
@@ -291,81 +299,75 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
         show_fab_3 = AnimationUtils.loadAnimation(getContext(), R.anim.fab3_show);
         hide_fab_3 = AnimationUtils.loadAnimation(getContext(), R.anim.fab3_hide);
 
-        /*
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (FAB_Status == false) {
-                    //Display FAB menu
-                    expandFAB();
-                    FAB_Status = true;
-                } else {
-                    //Close FAB menu
-                    hideFAB();
-                    FAB_Status = false;
-                }
-            }
-        });
-        */
-
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String t1 = txtS1_C1.getText().toString();
-                String[] tokens1 = t1.split(":");
-                int t1hours = Integer.parseInt(tokens1[0]);
-                int t1minutes = Integer.parseInt(tokens1[1]);
-                int t1seconds = Integer.parseInt(tokens1[2]);
-                int h1= t1hours;
-                int m1= t1minutes;
-                int s1= t1seconds;
-                String t2 = txtS1_E1.getText().toString();
-                String[] tokens2 = t2.split(":");
-                int t2hours = Integer.parseInt(tokens2[0]);
-                int t2minutes = Integer.parseInt(tokens2[1]);
-                int t2seconds = Integer.parseInt(tokens2[2]);
-                int h2= t2hours;
-                int m2= t2minutes;
-                int s2= t2seconds;
-
-                if (s2<s1 && m2<m1){
-                    int s2b=s2+60;
-                    int s= s2b-s1;
-                    int m2b=m2+60;
-                    int m= m2b-m1;
-                    if (s<10 && m<10) {
-                        lblS1_F1.setText("0" + m + ":0" + s);
-                        //lblS1_F1.setFont(new Font);
-                    } else if (s<10 && m>9){
-                        lblS1_F1.setText("" + m + ":0" + s);
+                ///*
+                String timeStart = txtS1_C1.getText().toString();
+                String timeStop = txtS1_E1.getText().toString();
+                SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+                Date t1 = null;
+                Date t2 = null;
+                String minsec = null;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m<10 && s<10) {
+                        minsec = ("0"+min+":"+"0"+sec);
+                    }else if (m<10 && s>9){
+                        minsec = ("0"+min+":"+sec);
+                    }else {
+                        minsec = (min+":"+sec);
                     }
-                }else if (s2<s1 && m2>m1){
-                    int s2b=s2+60;
-                    int s= (s2b-s1);
-                    int m2b=m2-1;
-                    int m= m2b-m1;
-                    if (s<10 && m<10) {
-                        lblS1_F1.setText("0" + m + ":0" + s);
-                    } else if (s<10 && m>9){
-                        lblS1_F1.setText("" + m + ":0" + s);
+                    if (m>=3 & s>0){
+                        lblS1_F1.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS1_F1.setTextColor(getResources().getColor(R.color.blue));
                     }
-                }else {
-                    int s= s2-s1;
-                    int m= m2-m1;
-                    if (s<10 && m<10) {
-                        lblS1_F1.setText("0" + m + ":0" + s);
-                    } else if (s<10 && m>9){
-                        lblS1_F1.setText("" + m + ":0" + s);
-                    }
+                    lblS1_F1.setText(minsec);
+                    } catch (Exception e) {
+                    e.printStackTrace();
                 }
+                //
+                timeStart = txtS1_C2.getText().toString();
+                timeStop = txtS1_E2.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
 
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m<10 && s<10) {
+                        minsec = ("0"+min+":"+"0"+sec);
+                    }else if (m<10 && s>9){
+                        minsec = ("0"+min+":"+sec);
+                    }else {
+                        minsec = (min+":"+sec);
+                    }
+                    if (m>=10 & s>0){
+                        lblS1_F2.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS1_F2.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS1_F2.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //
 
-                //***works***
-                //String t2 = "00:03:23";
-                //lblS1_F1.setText(t2);
-                //lblS1_F2.setText(txtS1_E2.getText());
+                //*/
+
             }
         });
 
@@ -376,6 +378,7 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
             }
         });
         fab.setOnClickListener(this);
+        //fab1.setOnClickListener(this);
         fab3.setOnClickListener(this);
         return view;
     }
@@ -387,84 +390,33 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
 
             case R.id.fab:
                 if (FAB_Status == false) {
-                    //Display FAB menu
                     expandFAB();
                     FAB_Status = true;
                 } else {
-                    //Close FAB menu
                     hideFAB();
                     FAB_Status = false;
                 }
                 break;
             /*
             case R.id.fab_1:
-                String t1 = txtS1_C1.getText().toString();
-                String[] tokens1 = t1.split(":");
-                int t1hours = Integer.parseInt(tokens1[0]);
-                int t1minutes = Integer.parseInt(tokens1[1]);
-                int t1seconds = Integer.parseInt(tokens1[2]);
-                int h1= t1hours;
-                int m1= t1minutes;
-                int s1= t1seconds;
-                String t2 = txtS1_E1.getText().toString();
-                String[] tokens2 = t2.split(":");
-                int t2hours = Integer.parseInt(tokens2[0]);
-                int t2minutes = Integer.parseInt(tokens2[1]);
-                int t2seconds = Integer.parseInt(tokens2[2]);
-                int h2= t2hours;
-                int m2= t2minutes;
-                int s2= t2seconds;
-
-                if (s2<s1 && m2<m1){
-                    int s2b=s2+60;
-                    int s= s2b-s1;
-                    int m2b=m2+60;
-                    int m= m2b-m1;
-                    if (s<10 && m<10) {
-                        lblS1_F1.setText("0" + m + ":0" + s);
-                    } else if (s<10 && m>9){
-                        lblS1_F1.setText("" + m + ":0" + s);
-                    }
-                }else if (s2<s1 && m2>m1){
-                    int s2b=s2+60;
-                    int s= (s2b-s1);
-                    int m2b=m2-1;
-                    int m= m2b-m1;
-                    if (s<10 && m<10) {
-                        lblS1_F1.setText("0" + m + ":0" + s);
-                    } else if (s<10 && m>9){
-                        lblS1_F1.setText("" + m + ":0" + s);
-                    }
-                }else {
-                    int s= s2-s1;
-                    int m= m2-m1;
-                    if (s<10 && m<10) {
-                        lblS1_F1.setText("0" + m + ":0" + s);
-                    } else if (s<10 && m>9){
-                        lblS1_F1.setText("" + m + ":0" + s);
-                    }
-                }
-                break;
+                String dateStart = txtS1_C1.getText().toString();
+                String dateStop = txtS1_E1.getText().toString();
+                SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+                Date d1 = null;
+                Date d2 = null;
+                try {
+                    d1 = format.parse(dateStart);
+                    d2 = format.parse(dateStop);
+                    DateTime dt1 = new DateTime(d1);
+                    DateTime dt2 = new DateTime(d2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    lblS1_F1.setText(min + ":" + sec );
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }break;
                 */
         }
-    }
-
-    public static long getTimeDiff (Date time1, Date time2, TimeUnit timeUnit){
-        long diffInMinutes = time2.getTime()-time1.getTime();
-        return timeUnit.convert(diffInMinutes, TimeUnit.MINUTES);
-    }
-
-    public static final int sec (int s1, int s2, int m1, int m2, int h1) {
-        if (s2>s1){
-            s1 =s1+60;
-            m1= m1-1;
-            return s1;
-        }
-        if (m2>m1){
-            m1 =m1+60;
-            h1= h1-1;
-        }
-            return m1;
     }
 
     private void expandFAB() {
@@ -493,7 +445,6 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
         fab3.startAnimation(show_fab_3);
         fab3.setClickable(true);
     }
-
 
     private void hideFAB() {
 
