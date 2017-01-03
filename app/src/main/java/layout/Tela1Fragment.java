@@ -34,7 +34,7 @@ import org.joda.time.Seconds;
 public class Tela1Fragment extends Fragment implements View.OnClickListener {
     private EditText    txtS1_C1, txtS1_E1, txtS1_C2, txtS1_E2, txtS1_C3, txtS1_E3, txtS1_C4, txtS1_E4, txtS2_C1, txtS2_E1, txtS2_C2,
                         txtS2_E2, txtS2_C3, txtS2_E3, txtS3_C1, txtS3_E1, txtS3_C2, txtS3_E2, txtS3_C3, txtS3_E3, txtS3_C4, txtS3_E4;
-    private TextView    lblS1_F1, lblS1_F2;
+    private TextView    lblS1_F1, lblS1_F2, lblS1F3;
 
     private FloatingActionButton fab;
     private FloatingActionButton fab1;
@@ -69,24 +69,35 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
         final TextView lblS1_F2 = (TextView) view.findViewById(R.id.lblS1_F2);
         final EditText txtS1_C3 = (EditText) view.findViewById(R.id.txtS1_C3);
         final EditText txtS1_E3 = (EditText) view.findViewById(R.id.txtS1_E3);
+        final TextView lblS1_F3 = (TextView) view.findViewById(R.id.lblS1_F3);
         final EditText txtS1_C4 = (EditText) view.findViewById(R.id.txtS1_C4);
         final EditText txtS1_E4 = (EditText) view.findViewById(R.id.txtS1_E4);
+        final TextView lblS1_F4 = (TextView) view.findViewById(R.id.lblS1_F4);
 
         final EditText txtS2_C1 = (EditText) view.findViewById(R.id.txtS2_C1);
         final EditText txtS2_E1 = (EditText) view.findViewById(R.id.txtS2_E1);
+        final TextView lblS2_F1 = (TextView) view.findViewById(R.id.lblS2_F1);
         final EditText txtS2_C2 = (EditText) view.findViewById(R.id.txtS2_C2);
         final EditText txtS2_E2 = (EditText) view.findViewById(R.id.txtS2_E2);
+        final TextView lblS2_F2 = (TextView) view.findViewById(R.id.lblS2_F2);
         final EditText txtS2_C3 = (EditText) view.findViewById(R.id.txtS2_C3);
         final EditText txtS2_E3 = (EditText) view.findViewById(R.id.txtS2_E3);
+        final TextView lblS2_F3 = (TextView) view.findViewById(R.id.lblS2_F3);
 
         final EditText txtS3_C1 = (EditText) view.findViewById(R.id.txtS3_C1);
         final EditText txtS3_E1 = (EditText) view.findViewById(R.id.txtS3_E1);
+        final TextView lblS3_F1 = (TextView) view.findViewById(R.id.lblS3_F1);
         final EditText txtS3_C2 = (EditText) view.findViewById(R.id.txtS3_C2);
         final EditText txtS3_E2 = (EditText) view.findViewById(R.id.txtS3_E2);
+        final TextView lblS3_F2 = (TextView) view.findViewById(R.id.lblS3_F2);
         final EditText txtS3_C3 = (EditText) view.findViewById(R.id.txtS3_C3);
         final EditText txtS3_E3 = (EditText) view.findViewById(R.id.txtS3_E3);
+        final TextView lblS3_F3 = (TextView) view.findViewById(R.id.lblS3_F3);
         final EditText txtS3_C4 = (EditText) view.findViewById(R.id.txtS3_C4);
         final EditText txtS3_E4 = (EditText) view.findViewById(R.id.txtS3_E4);
+        final TextView lblS3_F4 = (TextView) view.findViewById(R.id.lblS3_F4);
+
+        //txtS1_C1.setHint("19:51:00");
 
         txtS1_C1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -302,43 +313,47 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ///*
-                String timeStart = txtS1_C1.getText().toString();
-                String timeStop = txtS1_E1.getText().toString();
-                SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
-                Date t1 = null;
-                Date t2 = null;
-                String minsec = null;
-                try {
-                    t1 = format.parse(timeStart);
-                    t2 = format.parse(timeStop);
-                    DateTime dt1 = new DateTime(t1);
-                    DateTime dt2 = new DateTime(t2);
-                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
-                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
-                    int m= Integer.parseInt(min);
-                    int s= Integer.parseInt(sec);
-                    if (m<10 && s<10) {
-                        minsec = ("0"+min+":"+"0"+sec);
-                    }else if (m<10 && s>9){
-                        minsec = ("0"+min+":"+sec);
-                    }else {
-                        minsec = (min+":"+sec);
-                    }
-                    if (m>=3 & s>0){
-                        lblS1_F1.setTextColor(getResources().getColor(R.color.red));
-                    }else {
-                        lblS1_F1.setTextColor(getResources().getColor(R.color.blue));
-                    }
-                    lblS1_F1.setText(minsec);
+                    //S1_L1
+                    String timeStart = txtS1_C1.getText().toString();
+                    String timeStop = txtS1_E1.getText().toString();
+                    SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+                    int limit = 3;
+                    Date t1 = null;
+                    Date t2 = null;
+                    String minsec = null;
+                    try {
+                        t1 = format.parse(timeStart);
+                        t2 = format.parse(timeStop);
+                        DateTime dt1 = new DateTime(t1);
+                        DateTime dt2 = new DateTime(t2);
+                        String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                        String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                        int m = Integer.parseInt(min);
+                        int s = Integer.parseInt(sec);
+                        if (m < 10 && s < 10) {
+                            minsec = ("0" + min + ":" + "0" + sec);
+                        } else if (m < 10 && s > 9) {
+                            minsec = ("0" + min + ":" + sec);
+                        } else if (m > 9 && s < 10) {
+                            minsec = (min + ":0" + sec);
+                        } else {
+                            minsec = (min + ":" + sec);
+                        }
+                        if (m >= limit & s > 0) {
+                            lblS1_F1.setTextColor(getResources().getColor(R.color.red));
+                        } else {
+                            lblS1_F1.setTextColor(getResources().getColor(R.color.blue));
+                        }
+                        lblS1_F1.setText(minsec);
                     } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                //
+                        e.printStackTrace();
+                    }
+
+                //S1_L2
                 timeStart = txtS1_C2.getText().toString();
                 timeStop = txtS1_E2.getText().toString();
                 format = new SimpleDateFormat("HH:mm:ss");
-
+                limit = 10;
                 try {
                     t1 = format.parse(timeStart);
                     t2 = format.parse(timeStop);
@@ -348,14 +363,16 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
                     String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
                     int m= Integer.parseInt(min);
                     int s= Integer.parseInt(sec);
-                    if (m<10 && s<10) {
-                        minsec = ("0"+min+":"+"0"+sec);
-                    }else if (m<10 && s>9){
-                        minsec = ("0"+min+":"+sec);
-                    }else {
-                        minsec = (min+":"+sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
                     }
-                    if (m>=10 & s>0){
+                    if (m>=limit & s>0){
                         lblS1_F2.setTextColor(getResources().getColor(R.color.red));
                     }else {
                         lblS1_F2.setTextColor(getResources().getColor(R.color.blue));
@@ -364,10 +381,295 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                //
-
-                //*/
-
+                //S1_L3
+                timeStart = txtS1_C3.getText().toString();
+                timeStop = txtS1_E3.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
+                limit = 8;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
+                    }
+                    if (m>=limit & s>0){
+                        lblS1_F3.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS1_F3.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS1_F3.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //S1_L4
+                timeStart = txtS1_C4.getText().toString();
+                timeStop = txtS1_E4.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
+                limit = 4;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
+                    }
+                    if (m>=limit & s>0){
+                        lblS1_F4.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS1_F4.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS1_F4.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //S2_L1
+                timeStart = txtS2_C1.getText().toString();
+                timeStop = txtS2_E1.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
+                limit = 2;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
+                    }
+                    if (m>=limit & s>0){
+                        lblS2_F1.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS2_F1.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS2_F1.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //S2_L2
+                timeStart = txtS2_C2.getText().toString();
+                timeStop = txtS2_E2.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
+                limit = 4;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
+                    }
+                    if (m>=limit & s>0){
+                        lblS2_F2.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS2_F2.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS2_F2.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //S2_L3
+                timeStart = txtS2_C3.getText().toString();
+                timeStop = txtS2_E3.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
+                limit = 6;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
+                    }
+                    if (m>=limit & s>0){
+                        lblS2_F3.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS2_F3.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS2_F3.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //S3_L1
+                timeStart = txtS3_C1.getText().toString();
+                timeStop = txtS3_E1.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
+                limit = 15;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
+                    }
+                    if (m>=limit & s>0){
+                        lblS3_F1.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS3_F1.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS3_F1.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //S3_L2
+                timeStart = txtS3_C2.getText().toString();
+                timeStop = txtS3_E2.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
+                limit = 8;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
+                    }
+                    if (m>=limit & s>0){
+                        lblS3_F2.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS3_F2.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS3_F2.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //S3_L3
+                timeStart = txtS3_C3.getText().toString();
+                timeStop = txtS3_E3.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
+                limit = 30;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
+                    }
+                    if (m>=limit & s>0){
+                        lblS3_F3.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS3_F3.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS3_F3.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //S3_L4
+                timeStart = txtS3_C4.getText().toString();
+                timeStop = txtS3_E4.getText().toString();
+                format = new SimpleDateFormat("HH:mm:ss");
+                limit = 3;
+                try {
+                    t1 = format.parse(timeStart);
+                    t2 = format.parse(timeStop);
+                    DateTime dt1 = new DateTime(t1);
+                    DateTime dt2 = new DateTime(t2);
+                    String min = String.valueOf(Minutes.minutesBetween(dt1, dt2).getMinutes() % 60);
+                    String sec = String.valueOf(Seconds.secondsBetween(dt1, dt2).getSeconds() % 60);
+                    int m= Integer.parseInt(min);
+                    int s= Integer.parseInt(sec);
+                    if (m < 10 && s < 10) {
+                        minsec = ("0" + min + ":" + "0" + sec);
+                    } else if (m < 10 && s > 9) {
+                        minsec = ("0" + min + ":" + sec);
+                    } else if (m > 9 && s < 10) {
+                        minsec = (min + ":0" + sec);
+                    } else {
+                        minsec = (min + ":" + sec);
+                    }
+                    if (m>=limit & s>0){
+                        lblS3_F4.setTextColor(getResources().getColor(R.color.red));
+                    }else {
+                        lblS3_F4.setTextColor(getResources().getColor(R.color.blue));
+                    }
+                    lblS3_F4.setText(minsec);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+////////////////////
             }
         });
 
@@ -375,6 +677,16 @@ public class Tela1Fragment extends Fragment implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 lblS1_F1.setText("");
+                lblS1_F2.setText("");
+                lblS1_F3.setText("");
+                lblS1_F4.setText("");
+                lblS2_F1.setText("");
+                lblS2_F2.setText("");
+                lblS2_F3.setText("");
+                lblS3_F1.setText("");
+                lblS3_F2.setText("");
+                lblS3_F3.setText("");
+                lblS3_F4.setText("");
             }
         });
         fab.setOnClickListener(this);

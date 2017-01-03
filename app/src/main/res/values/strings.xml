@@ -1,19 +1,35 @@
 <resources>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="app_name"><i>Meeting Time Control</i></string>
     <string name="drawer_open">open drawer</string>
     <string name="drawer_close">close drawer</string>
-    <string name="screen1">F. M. M + N. V. C (2x)</string>
-    <string name="screen2">F. M. M + N. V. C (1x)</string>
-    <string name="screen3">Apresentações + N. V. C (2x)</string>
-    <string name="screen4">Apresentações + N. V. C (2x)</string>
-    <string name="screen5">Visita SC</string>
-    <string name="apresentações">Apresentações</string>
+    <string name="screen1">Living as Christians(2x)</string>
+    <string name="screen2">Living as Christians(1x)</string>
+    <string name="screen3">Presentations+Living as Christians(2x)</string>
+    <string name="screen4">Presentations+Living as Christians(1x)</string>
 
+    <string name="fragment1">Screen1</string>
+    <string name="fragment2">Screen2</string>
+    <string name="fragment3">Screen3</string>
+    <string name="fragment4">Screen4</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="fragment1">Tela1</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Treasures">TREASURES FROM GOD\'S WORD</string>
+    <string name="Field_Ministry">APPLY YOURSELF TO THE FIELD MINISTRY</string>
+    <string name="Christians">LIVING AS CHRISTIANS</string>
+    <string name="Start"><i>start</i></string>
+    <string name="End"><i>end</i></string>
+    <string name="Opening_Comments">Opening Comments</string>
+    <string name="Talk">Talk</string>
+    <string name="Spiritual_Gems">Digging for Spiritual Gems</string>
+    <string name="Reading">Bible Reading</string>
+    <string name="Initial_Call">Initial Call</string>
+    <string name="Return">Return Visit</string>
+    <string name="Study">Bible Study</string>
+    <string name="Sample_Presentations">Sample Presentations</string>
+    <string name="Part_1">Part 1</string>
+    <string name="Part_2">Part 2</string>
+    <string name="C_Bible_Study">Congregation Bible Study</string>
+    <string name="Concluding_Comments">Concluding Comments</string>
+    <string name="Meeting_Time">Meeting Time</string>
 
 </resources>

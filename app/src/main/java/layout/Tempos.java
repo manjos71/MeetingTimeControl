@@ -1,108 +1,43 @@
 package layout;
-import layout.Tela1Fragment;
+import org.joda.time.DateTime;
+import org.joda.time.Minutes;
+import org.joda.time.Seconds;
 
-import static com.example.marcosantonio.myapplication.R.id.txtS1_C1;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 /**
  * Created by Anjos on 29/12/2016.
  */
 
 public class Tempos {
-    public String t1 ;
-    public String t2 ;
-    public String interval;
+    //public String timeStart;
+    //public String timeStop;
+    //public Date t1 = null;
+    //public Date t2 = null;
+    public String minsec;
+    public Integer m;
+    public Integer s;
+    public String min;
+    public String sec;
 
     ///*
-    public Tempos() {
-        //String t1 = "00:10:00";
-        String[] tokens1 = t1.split(":");
-        int h1 = Integer.parseInt(tokens1[0]);
-        int m1 = Integer.parseInt(tokens1[1]);
-        int s1 = Integer.parseInt(tokens1[2]);
-        String t2 = "00:14:59";
-        String[] tokens2 = t2.split(":");
-        int h2 = Integer.parseInt(tokens2[0]);
-        int m2 = Integer.parseInt(tokens2[1]);
-        int s2 = Integer.parseInt(tokens2[2]);
-
-        if (s2<s1 && m2<m1){
-            int s2b=s2+60;
-            int s= s2b-s1;
-            int m2b=m2+60;
-            int m= m2b-m1;
-            if (s<10 && m<10) {
-                interval =("0" + m + ":0" + s);
-            } else if (s<10 && m>9){
-                interval=("" + m + ":0" + s);
-            }
-        }else if (s2<s1 && m2>m1){
-            int s2b=s2+60;
-            int s= (s2b-s1);
-            int m2b=m2-1;
-            int m= m2b-m1;
-            if (s<10 && m<10) {
-                interval=("0" + m + ":0" + s);
-            } else if (s<10 && m>9){
-                interval=("" + m + ":0" + s);
-            }
-        }else {
-            int s= s2-s1;
-            int m= m2-m1;
-            if (s<10 && m<10) {
-                interval=("0" + m + ":0" + s);
-            } else if (s<10 && m>9){
-                interval=("" + m + ":0" + s);
-            }
+    public Tempos(int m, int s) {
+        if (this.m < 10 && this.s < 10) {
+            minsec = ("0" + min + ":" + "0" + sec);
+        } else if (this.m < 10 && this.s > 9) {
+            minsec = ("0" + min + ":" + sec);
+        } else if (this.m > 9 && this.s < 10) {
+            minsec = (min + ":0" + sec);
+        } else {
+            minsec = (min + ":" + sec);
         }
-
     }
-    //*/
-
-    /*
-    public String interval(String interval) {
-        String t1 = "00:10:00";
-        String[] tokens1 = t1.split(":");
-        int h1 = Integer.parseInt(tokens1[0]);
-        int m1 = Integer.parseInt(tokens1[1]);
-        int s1 = Integer.parseInt(tokens1[2]);
-        String t2 = "00:14:59";
-        String[] tokens2 = t2.split(":");
-        int h2 = Integer.parseInt(tokens2[0]);
-        int m2 = Integer.parseInt(tokens2[1]);
-        int s2 = Integer.parseInt(tokens2[2]);
-
-        if (s2<s1 && m2<m1){
-            int s2b=s2+60;
-            int s= s2b-s1;
-            int m2b=m2+60;
-            int m= m2b-m1;
-            if (s<10 && m<10) {
-                interval =("0" + m + ":0" + s);
-            } else if (s<10 && m>9){
-                interval=("" + m + ":0" + s);
-            }
-        }else if (s2<s1 && m2>m1){
-            int s2b=s2+60;
-            int s= (s2b-s1);
-            int m2b=m2-1;
-            int m= m2b-m1;
-            if (s<10 && m<10) {
-                interval=("0" + m + ":0" + s);
-            } else if (s<10 && m>9){
-                interval=("" + m + ":0" + s);
-            }
-        }else {
-            int s= s2-s1;
-            int m= m2-m1;
-            if (s<10 && m<10) {
-                interval=("0" + m + ":0" + s);
-            } else if (s<10 && m>9){
-                interval=("" + m + ":0" + s);
-            }
-        }
-        return interval; }
-        */
 }
+
+
+
 
 
 

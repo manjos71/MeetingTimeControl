@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"><i>Controle de Tempo da Reunião</i></string>
+    <string name="drawer_open">open drawer</string>
+    <string name="drawer_close">close drawer</string>
+    <string name="screen1">Vida Cristã(2x)</string>
+    <string name="screen2">Vida Cristã(1x)</string>
+    <string name="screen3">Apresentações+Vida Cristã(2x)</string>
+    <string name="screen4">Apresentações+Vida Cristã(1x)</string>
+
+    <string name="fragment1">Screen1</string>
+    <string name="fragment2">Screen2</string>
+    <string name="fragment3">Screen3</string>
+    <string name="fragment4">Screen4</string>
+
+    <string name="Treasures">TESOUROS DA PALAVRA DE DEUS</string>
+    <string name="Field_Ministry">FAÇA SEU MELHOR NO MINISTÉRIO</string>
+    <string name="Christians">NOSSA VIDA CRISTÃ</string>
+    <string name="Start"><i>inicio</i></string>
+    <string name="End"><i>fim</i></string>
+    <string name="Opening_Comments">Comentários Iniciais</string>
+    <string name="Talk">Discurso</string>
+    <string name="Spiritual_Gems">Encontre jóias espirituais</string>
+    <string name="Reading">Leitura da bíblia</string>
+    <string name="Initial_Call">Primeira visita</string>
+    <string name="Return">Revisita</string>
+    <string name="Study">Estudo bíblico</string>
+    <string name="Sample_Presentations">Apresentações do mês</string>
+    <string name="Part_1">Parte 1</string>
+    <string name="Part_2">Parte 2</string>
+    <string name="C_Bible_Study">Estudo de livro</string>
+    <string name="Concluding_Comments">Comentários Finais</string>
+    <string name="Meeting_Time">Horário da Reunião</string>
+
+</resources>

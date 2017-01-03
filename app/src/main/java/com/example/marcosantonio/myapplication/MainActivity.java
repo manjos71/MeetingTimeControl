@@ -2,9 +2,6 @@ package com.example.marcosantonio.myapplication;
 
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -17,7 +14,6 @@ import layout.Tela1Fragment;
 import layout.Tela2Fragment;
 import layout.Tela3Fragment;
 import layout.Tela4Fragment;
-import layout.Tela5Fragment;
 import layout.Tela_inicialFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -65,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
-                    case R.id.navS1T3:
+                    case R.id.navS2T1:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_content,new Tela3Fragment());
                         fragmentTransaction.commit();
@@ -73,19 +69,11 @@ public class MainActivity extends AppCompatActivity {
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
-                    case R.id.navS2T1:
+                    case R.id.navS2T2:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_content,new Tela4Fragment());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle(R.string.screen4);
-                        item.setChecked(true);
-                        drawerLayout.closeDrawers();
-                        break;
-                    case R.id.navS2T2:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_content,new Tela5Fragment());
-                        fragmentTransaction.commit();
-                        getSupportActionBar().setTitle(R.string.screen5);
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;

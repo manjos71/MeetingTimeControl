@@ -3,11 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/frmTela2"
-    tools:context="layout.Tela2Fragment">
+    android:id="@+id/frmTela1"
+    tools:context="layout.Tela1Fragment">
 
     <!-- TODO: Update blank fragment layout -->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +17,7 @@
             android:id="@+id/section1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TESOUROS DA PALAVRA DE DEUS"
+            android:text="@string/Treasures"
             android:textAlignment="center"
             android:background="#5A6A70"
             android:textColor="#FFFFFF" />
@@ -35,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Comentários iniciais" />
+                android:text="@string/Opening_Comments" />
 
             <TextView
                 android:id="@+id/lblS1_B1"
@@ -43,7 +42,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#5A6A70"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS1_C1"
@@ -52,7 +54,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="19:50:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -62,7 +63,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#5A6A70"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS1_E1"
@@ -71,7 +74,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="19:53:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -83,7 +85,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:03:00"/>
+                android:hint="03:00"/>
 
         </LinearLayout>
 
@@ -99,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Discurso" />
+                android:text="@string/Talk" />
 
             <TextView
                 android:id="@+id/lblS1_B2"
@@ -107,7 +109,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#5A6A70"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS1_C2"
@@ -116,7 +121,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="19:53:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -126,7 +130,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#5A6A70"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS1_E2"
@@ -135,7 +141,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:03:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -147,7 +152,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:10:00"/>
+                android:hint="10:00"/>
 
         </LinearLayout>
 
@@ -163,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Encontre jóias espirituais" />
+                android:text="@string/Spiritual_Gems" />
 
             <TextView
                 android:id="@+id/lblS1_B3"
@@ -171,7 +176,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#5A6A70"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS1_C3"
@@ -180,7 +188,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:04:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -190,7 +197,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#5A6A70"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS1_E3"
@@ -199,18 +208,18 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:12:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/lblS1_F3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:08:00"/>
+                android:hint="08:00"/>
 
         </LinearLayout>
 
@@ -226,7 +235,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Leitura da biblia" />
+                android:text="@string/Reading" />
 
             <TextView
                 android:id="@+id/lblS1_B4"
@@ -234,7 +243,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#5A6A70"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS1_C4"
@@ -243,7 +255,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:12:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -253,7 +264,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#5A6A70"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS1_E4"
@@ -262,18 +275,18 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:16:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/lblS1_F4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:04:00"/>
+                android:hint="04:00"/>
 
         </LinearLayout>
 
@@ -285,7 +298,7 @@
             android:textAlignment="center"
             android:background="#C18626"
             android:textColor="#FFFFFF"
-            android:text="FAÇA SEU MELHOR NO MINISTÉRIO"/>
+            android:text="@string/Field_Ministry"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -299,7 +312,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Primeira visita" />
+                android:text="@string/Initial_Call" />
 
             <TextView
                 android:id="@+id/lblS2_B1"
@@ -307,7 +320,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#C18626"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS2_C1"
@@ -316,7 +332,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:17:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -326,7 +341,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#C18626"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS2_E1"
@@ -335,18 +352,18 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:19:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/lblS2_F1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:02:00"/>
+                android:hint="02:00"/>
 
         </LinearLayout>
 
@@ -362,7 +379,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Revisita" />
+                android:text="@string/Return" />
 
             <TextView
                 android:id="@+id/lblS2_B2"
@@ -370,7 +387,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#C18626"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS2_C2"
@@ -379,7 +399,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:20:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -389,7 +408,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#C18626"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS2_E2"
@@ -398,18 +419,18 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:24:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/lblS2_F2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:04:00"/>
+                android:hint="04:00"/>
 
         </LinearLayout>
 
@@ -425,7 +446,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Estudo biblico"
+                android:text="@string/Study"
                 android:gravity="center_vertical" />
 
             <TextView
@@ -434,7 +455,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#C18626"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS2_C3"
@@ -443,7 +467,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:25:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -453,7 +476,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#C18626"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS2_E3"
@@ -462,18 +487,18 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:31:30"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/lblS2_F3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:06:00"/>
+                android:hint="06:00"/>
 
         </LinearLayout>
 
@@ -485,7 +510,7 @@
             android:textAlignment="center"
             android:background="#961526"
             android:textColor="#FFFFFF"
-            android:text="NOSSA VIDA CRISTÃ"/>
+            android:text="@string/Christians"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -499,7 +524,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Designação 1" />
+                android:text="@string/Part_1"
+                />
 
             <TextView
                 android:id="@+id/lblS3_B1"
@@ -507,7 +533,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#961526"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS3_C1"
@@ -516,7 +545,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:36:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -526,7 +554,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#961526"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS3_E1"
@@ -535,18 +565,18 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:51:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/lblS3_F1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:10:00"/>
+                />
 
         </LinearLayout>
 
@@ -562,7 +592,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Designação 2" />
+                android:text="@string/Part_2"
+                />
 
             <TextView
                 android:id="@+id/lblS3_B2"
@@ -570,7 +601,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#961526"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS3_C2"
@@ -579,7 +613,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:51:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -589,7 +622,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#961526"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS3_E2"
@@ -598,18 +633,17 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:51:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/lblS3_F2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
-                android:textStyle="bold"
-                android:hint="00:05:00"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -625,7 +659,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Estudo de Livro" />
+                android:text="@string/C_Bible_Study"
+                />
 
             <TextView
                 android:id="@+id/lblS3_B3"
@@ -633,7 +668,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#961526"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS3_C3"
@@ -642,7 +680,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:51:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -652,7 +689,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#961526"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS3_E3"
@@ -661,18 +700,18 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="21:21:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/lblS3_F3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:30:00"/>
+                android:hint="30:00"/>
 
         </LinearLayout>
 
@@ -688,7 +727,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Comentários finais" />
+                android:text="@string/Concluding_Comments"
+                />
 
             <TextView
                 android:id="@+id/lblS3_B4"
@@ -696,7 +736,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Inicio" />
+                android:text="@string/Start"
+                android:textColor="#961526"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"/>
 
             <EditText
                 android:id="@+id/txtS3_C4"
@@ -705,7 +748,6 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="20:21:00"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
@@ -715,7 +757,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Fim"/>
+                android:text="@string/End"
+                android:textColor="#961526"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtS3_E4"
@@ -724,18 +768,19 @@
                 android:layout_weight="2.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:inputType="time"
-                android:hint="21:24:00"
+
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/lblS3_F4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:hint="00:03:00"/>
+                android:hint="03:00"/>
         </LinearLayout>
 
     </LinearLayout>

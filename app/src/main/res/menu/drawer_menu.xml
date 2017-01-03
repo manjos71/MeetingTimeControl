@@ -18,13 +18,6 @@
             android:icon="@drawable/menur"
             app:menu = "@menu/drawer_menu_sub"
             ></item>
-
-        <item
-            android:id="@+id/navS1T3"
-            android:title="Tela3"
-            android:icon="@drawable/grid"
-            ></item>
-
     </group>
 
     <item android:title="Seção 2">
@@ -32,15 +25,16 @@
         <menu>
             <item
                 android:id="@+id/navS2T1"
-                android:title="Tela4"
-                android:icon="@drawable/menuq"
+                android:title="Tela3"
+                android:icon="@drawable/grid"
                 ></item>
 
             <item
                 android:id="@+id/navS2T2"
-                android:title="Tela5"
-                android:icon="@drawable/hamburger"
+                android:title="Tela4"
+                android:icon="@drawable/menuq"
                 ></item>
+
         </menu>
 
     </item>
